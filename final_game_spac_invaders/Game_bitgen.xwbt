@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\digit_program\project_final\final_game_spac_invaders\Game.ncd
+OUTFILE=E:\digit_program\project_final\final_game_spac_invaders\Game.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\digit_program\project_final\final_game_spac_invaders
+LICENSE=WebPack
+USER_INFO=__0_0_0

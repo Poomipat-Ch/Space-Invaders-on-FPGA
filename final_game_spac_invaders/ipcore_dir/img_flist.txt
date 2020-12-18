@@ -1,0 +1,17 @@
+# Output products list for <img>
+_xmsgs\pn_parser.xmsgs
+img.asy
+img.gise
+img.mif
+img.ngc
+img.sym
+img.v
+img.veo
+img.xco
+img.xise
+img\blk_mem_gen_v7_3_readme.txt
+img\doc\blk_mem_gen_v7_3_vinfo.html
+img\doc\pg058-blk-mem-gen.pdf
+img_flist.txt
+img_xmdf.tcl
+summary.log

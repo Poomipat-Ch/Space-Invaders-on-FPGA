@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/digit_program/project_final/final_game_spac_invaders/Game_isim_beh.exe" -prj "E:/digit_program/project_final/final_game_spac_invaders/Game_beh.prj" "work.Game" "work.glbl" 

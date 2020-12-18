@@ -1,0 +1,17 @@
+# Output products list for <SpaceShip>
+SpaceShip.asy
+SpaceShip.gise
+SpaceShip.mif
+SpaceShip.ngc
+SpaceShip.sym
+SpaceShip.v
+SpaceShip.veo
+SpaceShip.xco
+SpaceShip.xise
+SpaceShip\blk_mem_gen_v7_3_readme.txt
+SpaceShip\doc\blk_mem_gen_v7_3_vinfo.html
+SpaceShip\doc\pg058-blk-mem-gen.pdf
+SpaceShip_flist.txt
+SpaceShip_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+summary.log

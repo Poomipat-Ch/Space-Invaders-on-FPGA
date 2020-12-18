@@ -1,0 +1,1671 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Game'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -r 4 -global_opt area -equivalent_register_removal on -mt 2
+-detail -ir off -ignore_keep_hierarchy -pr off -c 1 -lc area -bp -power off -o
+Game_map.ncd Game.ngd Game.pcf 
+Target Device  : xc6slx9
+Target Package : tqg144
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Thu Dec 17 17:59:40 2020
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    1
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,318 out of  11,440   11%
+    Number used as Flip Flops:               1,311
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                6
+  Number of Slice LUTs:                      4,435 out of   5,720   77%
+    Number used as logic:                    4,376 out of   5,720   76%
+      Number using O6 output only:           1,614
+      Number using O5 output only:             588
+      Number using O5 and O6:                2,174
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   1,440    0%
+    Number used exclusively as route-thrus:     59
+      Number with same-slice register load:     25
+      Number with same-slice carry load:        34
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,222 out of   1,430   85%
+  Number of MUXCYs used:                     2,732 out of   2,860   95%
+  Number of LUT Flip Flop pairs used:        4,451
+    Number with an unused Flip Flop:         3,367 out of   4,451   75%
+    Number with an unused LUT:                  16 out of   4,451    1%
+    Number of fully used LUT-FF pairs:       1,068 out of   4,451   23%
+    Number of unique control sets:             122
+    Number of slice register sites lost
+      to control set restrictions:             696 out of  11,440    6%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        15 out of     102   14%
+    Number of LOCed IOBs:                       15 out of      15  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         9 out of      32   28%
+  Number of RAMB8BWERs:                         16 out of      64   25%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      16    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.92
+
+Peak Memory Usage:  4636 MB
+Total REAL time to MAP completion:  3 mins 5 secs 
+Total CPU time to MAP completion (all processors):   3 mins 8 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
+   (RAMB8BWER).  9K Block RAM initialization data, both user defined and
+   default, may be incorrect and should not be used.  For more information,
+   please reference Xilinx Answer Record 39999.
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:Xst:2261 - The FF/Latch <points_2> in Unit <Game> is equivalent to the
+   following FF/Latch, which will be removed : <points_2_1> 
+INFO:Xst:2261 - The FF/Latch <points_3> in Unit <Game> is equivalent to the
+   following 2 FFs/Latches, which will be removed : <points_3_1> <points_3_2> 
+INFO:Xst:2261 - The FF/Latch <points_4> in Unit <Game> is equivalent to the
+   following 3 FFs/Latches, which will be removed : <points_4_1> <points_4_2>
+   <points_4_3> 
+INFO:Xst:2261 - The FF/Latch <points_5> in Unit <Game> is equivalent to the
+   following 4 FFs/Latches, which will be removed : <points_5_1> <points_5_2>
+   <points_5_3> <points_5_4> 
+INFO:Xst:2261 - The FF/Latch <points_6> in Unit <Game> is equivalent to the
+   following 7 FFs/Latches, which will be removed : <points_6_1> <points_6_2>
+   <points_6_3> <points_6_4> <points_6_5> <points_6_6> <points_6_7> 
+INFO:Xst:2261 - The FF/Latch <points_7> in Unit <Game> is equivalent to the
+   following 5 FFs/Latches, which will be removed : <points_7_1> <points_7_2>
+   <points_7_3> <points_7_4> <points_7_5> 
+INFO:Xst:2261 - The FF/Latch <points_8> in Unit <Game> is equivalent to the
+   following 8 FFs/Latches, which will be removed : <points_8_1> <points_8_2>
+   <points_8_3> <points_8_4> <points_8_5> <points_8_6> <points_8_7> <points_8_8>
+    
+INFO:Xst:2261 - The FF/Latch <points_9> in Unit <Game> is equivalent to the
+   following 9 FFs/Latches, which will be removed : <points_9_1> <points_9_2>
+   <points_9_3> <points_9_4> <points_9_5> <points_9_6> <points_9_7> <points_9_8>
+   <points_9_9> 
+INFO:Xst:2261 - The FF/Latch <points_10> in Unit <Game> is equivalent to the
+   following 4 FFs/Latches, which will be removed : <points_10_1> <points_10_2>
+   <points_10_3> <points_10_4> 
+INFO:Xst:2261 - The FF/Latch <points_11> in Unit <Game> is equivalent to the
+   following 8 FFs/Latches, which will be removed : <points_11_1> <points_11_2>
+   <points_11_3> <points_11_4> <points_11_5> <points_11_6> <points_11_7>
+   <points_11_8> 
+INFO:Xst:2261 - The FF/Latch <points_12> in Unit <Game> is equivalent to the
+   following 4 FFs/Latches, which will be removed : <points_12_1> <points_12_2>
+   <points_12_3> <points_12_4> 
+INFO:LIT:243 - Logical network CLK_BUFGP/N2 has no load.
+INFO:LIT:243 - Logical network CLK_BUFGP/N3 has no load.
+INFO:LIT:243 - Logical network startbtn_IBUF has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  12 block(s) removed
+   2 block(s) optimized away
+  12 signal(s) removed
+1064 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "CLK_BUFGP/N2" is sourceless and has been removed.
+The signal "CLK_BUFGP/N3" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_lut<8>" is
+unused and has been removed.
+ Unused block
+"GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_lut<8>_INV_0" (BUF)
+removed.
+The signal "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_cy<8>" is
+unused and has been removed.
+ Unused block "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_cy<8>"
+(MUX) removed.
+The signal "GND_1_o_PWR_1_o_div_182/a[31]_GND_106_o_add_53_OUT<8>" is unused and
+has been removed.
+ Unused block "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_xor<8>"
+(XOR) removed.
+The signal "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_lut<9>" is
+unused and has been removed.
+ Unused block
+"GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_lut<9>1_INV_0" (BUF)
+removed.
+The signal "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_cy<9>" is
+unused and has been removed.
+ Unused block "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_cy<9>"
+(MUX) removed.
+The signal "GND_1_o_PWR_1_o_div_182/a[31]_GND_106_o_add_53_OUT<9>" is unused and
+has been removed.
+ Unused block "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_xor<9>"
+(XOR) removed.
+The signal "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_lut<10>" is
+unused and has been removed.
+ Unused block
+"GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_lut<10>1_INV_0" (BUF)
+removed.
+The signal "GND_1_o_PWR_1_o_div_182/a[31]_GND_106_o_add_53_OUT<10>" is unused
+and has been removed.
+ Unused block "GND_1_o_PWR_1_o_div_182/Madd_a[31]_GND_106_o_add_53_OUT_xor<10>"
+(XOR) removed.
+The signal "GND_1_o_PWR_1_o_div_186/Madd_a[31]_GND_108_o_add_53_OUT_lut<9>" is
+unused and has been removed.
+ Unused block
+"GND_1_o_PWR_1_o_div_186/Madd_a[31]_GND_108_o_add_53_OUT_lut<9>_INV_0" (BUF)
+removed.
+The signal "GND_1_o_PWR_1_o_div_186/a[31]_GND_108_o_add_53_OUT<9>" is unused and
+has been removed.
+ Unused block "GND_1_o_PWR_1_o_div_186/Madd_a[31]_GND_108_o_add_53_OUT_xor<9>"
+(XOR) removed.
+Unused block "CLK_BUFGP/XST_GND" (ZERO) removed.
+Unused block "CLK_BUFGP/XST_VCC" (ONE) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<5>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<6>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<6>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<7>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<7>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<8>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<8>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<9>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<9>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<10>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<10>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<11>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<11>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<12>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<12>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<13>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<13>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<14>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<14>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<15>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<15>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<16>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<16>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<17>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<17>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<18>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<18>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<19>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<19>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<20>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<20>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<21>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<21>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<22>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<22>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<23>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<23>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<24>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<24>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<25>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<25>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<26>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<26>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<27>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<27>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<28>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<28>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<29>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<29>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_cy<30>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<30>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<5>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<6>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<6>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<7>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<7>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<8>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<8>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<9>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<9>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<10>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<10>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<11>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<11>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<12>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<12>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<13>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<13>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<14>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<14>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<15>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<15>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<16>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<16>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<17>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<17>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<18>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<18>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<19>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<19>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<20>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<20>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<21>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<21>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<22>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<22>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<23>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<23>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<24>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<24>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<25>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<25>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<26>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<26>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<27>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<27>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<28>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<28>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<29>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<29>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_cy<30>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<30>_rt
+LUT1 		Madd_n1786[13:0]_cy<2>_rt
+LUT1 		Madd_n1786[13:0]_cy<4>_rt
+LUT1 		Madd_n1786[13:0]_cy<5>_rt
+LUT1 		Madd_n1790[13:0]_cy<5>_rt
+LUT1 		Madd_n1786[13:0]_cy<6>_rt
+LUT1 		Madd_n1790[13:0]_cy<6>_rt
+LUT1 		Madd_n1786[13:0]_cy<7>_rt
+LUT1 		Madd_n1790[13:0]_cy<7>_rt
+LUT1 		Madd_n1786[13:0]_cy<8>_rt
+LUT1 		Madd_n1790[13:0]_cy<8>_rt
+LUT1 		Madd_n1786[13:0]_cy<9>_rt
+LUT1 		Madd_n1790[13:0]_cy<9>_rt
+LUT1 		Madd_n1786[13:0]_cy<10>_rt
+LUT1 		Madd_n1790[13:0]_cy<10>_rt
+LUT1 		Madd_n1786[13:0]_cy<11>_rt
+LUT1 		Madd_n1790[13:0]_cy<11>_rt
+LUT1 		Madd_n1818[15:0]_cy<1>_rt
+LUT1 		Madd_n1818[15:0]_cy<2>_rt
+LUT1 		Madd_n1818[15:0]_cy<3>_rt
+LUT1 		Madd_n1818[15:0]_cy<4>_rt
+LUT1 		Madd_n1818[15:0]_cy<5>_rt
+LUT1 		Madd_n1818[15:0]_cy<6>_rt
+LUT1 		Madd_n1818[15:0]_cy<7>_rt
+LUT1 		Madd_n1818[15:0]_cy<8>_rt
+LUT1 		Madd_n1818[15:0]_cy<9>_rt
+LUT1 		Madd_n1818[15:0]_cy<10>_rt
+LUT1 		Madd_n1818[15:0]_cy<11>_rt
+LUT1 		Madd_n1818[15:0]_cy<12>_rt
+LUT1 		Madd_n1818[15:0]_cy<13>_rt
+LUT1 		Madd_n1812[17:0]_cy<1>_rt
+LUT1 		Madd_n1812[17:0]_cy<2>_rt
+LUT1 		Madd_n1812[17:0]_cy<3>_rt
+LUT1 		Madd_n1812[17:0]_cy<4>_rt
+LUT1 		Madd_n1812[17:0]_cy<5>_rt
+LUT1 		Madd_n1812[17:0]_cy<6>_rt
+LUT1 		Madd_n1812[17:0]_cy<7>_rt
+LUT1 		Madd_n1812[17:0]_cy<8>_rt
+LUT1 		Madd_n1812[17:0]_cy<9>_rt
+LUT1 		Madd_n1812[17:0]_cy<10>_rt
+LUT1 		Madd_n1812[17:0]_cy<11>_rt
+LUT1 		Madd_n1812[17:0]_cy<12>_rt
+LUT1 		Madd_n1812[17:0]_cy<13>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<1>_rt
+LUT1 		SHIP/Msub_spaceshipX[31]_GND_2_o_sub_46_OUT_cy<1>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<2>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<3>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_cy<4>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<1>_rt
+LUT1 		SHIP/Msub_spaceshipX2[31]_GND_2_o_sub_83_OUT_cy<1>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<2>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<3>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_cy<4>_rt
+LUT1 		ALN15/Msub_speed_level[31]_GND_80_o_sub_21_OUT_cy<4>_rt
+LUT1 		ALN15/Msub_speed_level[31]_GND_80_o_sub_21_OUT_cy<6>_rt
+LUT1 		ALN15/Msub_speed_level[31]_GND_80_o_sub_21_OUT_cy<8>_rt
+LUT1 		ALN15/Msub_speed_level[31]_GND_80_o_sub_21_OUT_cy<9>_rt
+LUT1 		ALN15/Msub_speed_level[31]_GND_80_o_sub_21_OUT_cy<14>_rt
+LUT1 		ALN15/Msub_speed_level[31]_GND_80_o_sub_21_OUT_cy<15>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<1>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<2>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<3>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<4>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<5>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<6>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<7>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<8>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<9>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<10>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<11>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<12>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<13>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<14>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<15>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<16>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<17>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<18>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<19>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<20>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<21>_rt
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<22>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<1>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<2>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<3>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<4>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<5>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<6>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<7>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<8>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<9>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<10>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<11>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<12>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<13>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<14>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<15>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<16>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<17>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<18>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<19>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<20>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<21>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<22>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<23>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<24>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<1>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<2>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<3>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<4>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<5>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<6>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<7>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<8>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<9>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<10>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<11>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<12>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<13>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<14>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<15>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<16>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<17>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<18>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<19>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<20>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<21>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<22>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<23>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<24>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<25>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<1>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<2>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<3>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<4>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<5>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<6>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<7>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<8>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<9>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<10>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<11>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<12>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<13>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<14>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<15>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<16>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<17>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<18>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<19>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<20>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<21>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<22>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<23>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<24>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<1>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<2>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<3>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<4>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<5>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<6>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<7>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<8>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<9>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<10>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<11>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<12>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<13>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<14>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<15>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<16>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<17>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<18>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<19>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<20>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<21>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<22>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<23>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<24>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<25>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<1>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<2>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<3>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<4>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<5>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<6>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<7>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<8>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<9>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<10>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<11>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<12>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<13>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<14>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<15>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<16>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<17>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<18>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<19>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<20>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<21>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<22>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<23>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_cy<24>_rt
+LUT1 		Mcount_select_delay_cy<1>_rt
+LUT1 		Mcount_select_delay_cy<2>_rt
+LUT1 		Mcount_select_delay_cy<3>_rt
+LUT1 		Mcount_select_delay_cy<4>_rt
+LUT1 		Mcount_select_delay_cy<5>_rt
+LUT1 		Mcount_select_delay_cy<6>_rt
+LUT1 		Mcount_select_delay_cy<7>_rt
+LUT1 		Mcount_select_delay_cy<8>_rt
+LUT1 		Mcount_select_delay_cy<9>_rt
+LUT1 		Mcount_select_delay_cy<10>_rt
+LUT1 		Mcount_select_delay_cy<11>_rt
+LUT1 		Mcount_select_delay_cy<12>_rt
+LUT1 		Mcount_select_delay_cy<13>_rt
+LUT1 		Mcount_select_delay_cy<14>_rt
+LUT1 		Mcount_select_delay_cy<15>_rt
+LUT1 		Mcount_select_delay_cy<16>_rt
+LUT1 		Mcount_select_delay_cy<17>_rt
+LUT1 		Mcount_select_delay_cy<18>_rt
+LUT1 		Mcount_select_delay_cy<19>_rt
+LUT1 		Mcount_select_delay_cy<20>_rt
+LUT1 		SND/Mcount_playtime_cy<0>_rt
+LUT1 		ALN15/Mcount_counter_cy<1>_rt
+LUT1 		ALN15/Mcount_counter_cy<2>_rt
+LUT1 		ALN15/Mcount_counter_cy<3>_rt
+LUT1 		ALN15/Mcount_counter_cy<4>_rt
+LUT1 		ALN15/Mcount_counter_cy<5>_rt
+LUT1 		ALN15/Mcount_counter_cy<6>_rt
+LUT1 		ALN15/Mcount_counter_cy<7>_rt
+LUT1 		ALN15/Mcount_counter_cy<8>_rt
+LUT1 		ALN15/Mcount_counter_cy<9>_rt
+LUT1 		ALN15/Mcount_counter_cy<10>_rt
+LUT1 		ALN15/Mcount_counter_cy<11>_rt
+LUT1 		ALN15/Mcount_counter_cy<12>_rt
+LUT1 		ALN15/Mcount_counter_cy<13>_rt
+LUT1 		ALN15/Mcount_counter_cy<14>_rt
+LUT1 		ALN15/Mcount_counter_cy<15>_rt
+LUT1 		ALN15/Mcount_counter_cy<16>_rt
+LUT1 		ALN15/Mcount_counter_cy<17>_rt
+LUT1 		ALN15/Mcount_counter_cy<18>_rt
+LUT1 		ALN15/Mcount_counter_cy<19>_rt
+LUT1 		ALN15/Mcount_counter_cy<20>_rt
+LUT1 		ALN15/Mcount_counter_cy<21>_rt
+LUT1 		ALN15/Mcount_counter_cy<22>_rt
+LUT1 		Maddsub_points_0[3]_PWR_1_o_MuLt_188_OUT_Madd3_cy<2>_rt
+LUT1 		Maddsub_points_0[3]_PWR_1_o_MuLt_188_OUT_Madd3_cy<8>_rt
+LUT1 		Maddsub_points_1[3]_PWR_1_o_MuLt_196_OUT_Madd3_cy<8>_rt
+LUT1 		Maddsub_points_1[3]_PWR_1_o_MuLt_196_OUT_Madd3_cy<9>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd2_cy<5>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd2_cy<6>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd1_cy<8>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd2_cy<5>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd2_cy<6>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd1_cy<8>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd1_cy<3>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd1_cy<6>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd1_cy<4>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd1_cy<7>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd1_cy<5>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd1_cy<3>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd1_cy<6>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd1_cy<4>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd1_cy<7>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd1_cy<5>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd3_cy<8>_rt
+LUT1 		Maddsub_points_3[3]_PWR_1_o_MuLt_212_OUT_Madd3_cy<9>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd3_cy<8>_rt
+LUT1 		Maddsub_points_2[3]_PWR_1_o_MuLt_204_OUT_Madd3_cy<9>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<22>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<21>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<20>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<19>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<18>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<17>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<16>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<15>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<14>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<13>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<12>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<11>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<10>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<9>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<8>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<7>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<6>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<5>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<4>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<3>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<2>_rt
+LUT1 		ALIENRKT6/Mcount_counter_cy<1>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<22>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<21>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<20>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<19>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<18>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<17>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<16>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<15>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<14>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<13>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<12>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<11>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<10>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<9>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<8>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<7>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<6>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<5>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<4>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<3>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<2>_rt
+LUT1 		ALIENRKT5/Mcount_counter_cy<1>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<22>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<21>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<20>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<19>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<18>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<17>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<16>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<15>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<14>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<13>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<12>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<11>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<10>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<9>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<8>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<7>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<6>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<5>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<4>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<3>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<2>_rt
+LUT1 		ALIENRKT4/Mcount_counter_cy<1>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<22>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<21>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<20>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<19>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<18>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<17>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<16>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<15>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<14>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<13>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<12>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<11>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<10>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<9>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<8>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<7>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<6>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<5>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<4>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<3>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<2>_rt
+LUT1 		ALIENRKT3/Mcount_counter_cy<1>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<22>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<21>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<20>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<19>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<18>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<17>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<16>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<15>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<14>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<13>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<12>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<11>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<10>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<9>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<8>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<7>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<6>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<5>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<4>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<3>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<2>_rt
+LUT1 		ALIENRKT2/Mcount_counter_cy<1>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<22>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<21>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<20>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<19>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<18>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<17>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<16>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<15>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<14>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<13>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<12>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<11>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<10>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<9>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<8>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<7>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<6>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<5>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<4>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<3>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<2>_rt
+LUT1 		ALIENRKT1/Mcount_counter_cy<1>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<22>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<21>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<20>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<19>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<18>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<17>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<16>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<15>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<14>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<13>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<12>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<11>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<10>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<9>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<8>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<7>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<6>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<5>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<4>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<3>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<2>_rt
+LUT1 		RKTSHIP2/Mcount_counter_cy<1>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<22>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<21>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<20>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<19>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<18>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<17>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<16>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<15>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<14>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<13>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<12>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<11>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<10>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<9>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<8>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<7>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<6>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<5>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<4>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<3>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<2>_rt
+LUT1 		RKTSHIP/Mcount_counter_cy<1>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<10>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<9>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<8>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<7>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<6>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<5>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<4>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<3>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<2>_rt
+LUT1 		vga/Mcount_v_cntr_reg_cy<1>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<10>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<9>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<8>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<7>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<6>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<5>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<4>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<3>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<2>_rt
+LUT1 		vga/Mcount_h_cntr_reg_cy<1>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<15>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<14>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<13>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<12>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<11>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<10>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<9>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<8>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<7>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<6>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<5>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<4>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<3>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<2>_rt
+LUT1 		CLK_Div_200Hz/Madd_r_nxt_cy<1>_rt
+LUT1 		Madd_n1818[15:0]_xor<14>_rt
+INV 		][43064_0_INV_0
+LUT1 		GND_1_o_PWR_1_o_div_186/Madd_a[31]_GND_108_o_add_49_OUT_cy<13>_rt
+LUT1 		GND_1_o_PWR_1_o_div_186/Madd_a[31]_GND_108_o_add_55_OUT_cy<10>_rt
+LUT1 		Madd_spaceshipX[31]_GND_1_o_add_395_OUT_xor<31>_rt
+LUT1 		SHIP/Madd_spaceshipX[31]_GND_2_o_add_47_OUT_xor<31>_rt
+LUT1 		Madd_spaceshipX2[31]_GND_1_o_add_413_OUT_xor<31>_rt
+LUT1 		SHIP/Madd_spaceshipX2[31]_GND_2_o_add_84_OUT_xor<31>_rt
+LUT1 		Madd_n1786[13:0]_xor<12>_rt
+LUT1 		Madd_n1790[13:0]_xor<12>_rt
+LUT1 		Madd_n1812[17:0]_xor<14>_rt
+INV 		][43216_94_INV_0
+LUT1 		ALN14/Madd_firecounter[27]_GND_80_o_add_1_OUT_xor<23>_rt
+LUT1 		ALN12/Madd_firecounter[27]_GND_80_o_add_1_OUT_xor<25>_rt
+LUT1 		ALN9/Madd_firecounter[27]_GND_80_o_add_1_OUT_xor<26>_rt
+LUT1 		ALN7/Madd_firecounter[27]_GND_80_o_add_1_OUT_xor<25>_rt
+LUT1 		ALN5/Madd_firecounter[27]_GND_80_o_add_1_OUT_xor<26>_rt
+LUT1 		ALN1/Madd_firecounter[27]_GND_80_o_add_1_OUT_xor<25>_rt
+LUT1 		Mcount_select_delay_xor<21>_rt
+LUT1 		ALN15/Mcount_counter_xor<23>_rt
+LUT1 		ALIENRKT6/Mcount_counter_xor<23>_rt
+LUT1 		ALIENRKT5/Mcount_counter_xor<23>_rt
+LUT1 		ALIENRKT4/Mcount_counter_xor<23>_rt
+LUT1 		ALIENRKT3/Mcount_counter_xor<23>_rt
+LUT1 		ALIENRKT2/Mcount_counter_xor<23>_rt
+LUT1 		ALIENRKT1/Mcount_counter_xor<23>_rt
+LUT1 		RKTSHIP2/Mcount_counter_xor<23>_rt
+LUT1 		RKTSHIP/Mcount_counter_xor<23>_rt
+LUT1 		vga/Mcount_v_cntr_reg_xor<11>_rt
+LUT1 		vga/Mcount_h_cntr_reg_xor<11>_rt
+INV 		][43184_75_INV_0
+INV 		][43185_77_INV_0
+INV 		][43186_79_INV_0
+INV 		][43187_81_INV_0
+INV 		][43188_83_INV_0
+INV 		][43189_85_INV_0
+INV 		][43190_87_INV_0
+INV 		][43191_89_INV_0
+INV 		][43192_91_INV_0
+INV 		][43324_99_INV_0
+INV 		][43325_101_INV_0
+INV 		][43326_103_INV_0
+INV 		][43327_105_INV_0
+INV 		][43328_107_INV_0
+INV 		][43329_109_INV_0
+INV 		][43330_111_INV_0
+INV 		][43331_113_INV_0
+INV 		][43332_115_INV_0
+INV 		][1782_866_INV_0
+INV 		][1787_870_INV_0
+INV 		][1899_926_INV_0
+INV 		][1902_934_INV_0
+INV 		][3138_1093_INV_0
+INV 		][3142_1097_INV_0
+INV 		][3163_1110_INV_0
+INV 		][4223_1347_INV_0
+INV 		][4245_1402_INV_0
+INV 		][4256_1413_INV_0
+INV 		][4301_1430_INV_0
+INV 		][4308_1433_INV_0
+INV 		][4315_1435_INV_0
+INV 		][4322_1437_INV_0
+INV 		][4329_1439_INV_0
+INV 		][6789_1582_INV_0
+INV 		][6804_1587_INV_0
+INV 		][6845_1593_INV_0
+INV 		][6860_1598_INV_0
+INV 		][6901_1604_INV_0
+INV 		][6916_1609_INV_0
+INV 		][6957_1615_INV_0
+INV 		][6972_1620_INV_0
+INV 		][7013_1626_INV_0
+INV 		][7028_1631_INV_0
+INV 		][7069_1637_INV_0
+INV 		][7084_1642_INV_0
+INV 		][7142_1651_INV_0
+INV 		][7155_1655_INV_0
+INV 		][7156_1657_INV_0
+INV 		][7169_1661_INV_0
+INV 		][7170_1663_INV_0
+INV 		][7198_1669_INV_0
+INV 		][7211_1673_INV_0
+INV 		][7212_1675_INV_0
+INV 		][7225_1679_INV_0
+INV 		][7226_1681_INV_0
+INV 		][7254_1687_INV_0
+INV 		][7267_1691_INV_0
+INV 		][7268_1693_INV_0
+INV 		][7281_1697_INV_0
+INV 		][7282_1699_INV_0
+INV 		][7310_1705_INV_0
+INV 		][7323_1709_INV_0
+INV 		][7324_1711_INV_0
+INV 		][7337_1715_INV_0
+INV 		][7338_1717_INV_0
+INV 		][7366_1723_INV_0
+INV 		][7379_1727_INV_0
+INV 		][7380_1729_INV_0
+INV 		][7393_1733_INV_0
+INV 		][7394_1735_INV_0
+INV 		][7422_1741_INV_0
+INV 		][7435_1745_INV_0
+INV 		][7436_1747_INV_0
+INV 		][7449_1751_INV_0
+INV 		][7450_1753_INV_0
+INV 		][8461_1912_INV_0
+INV 		][8476_1917_INV_0
+INV 		][8517_1923_INV_0
+INV 		][8532_1928_INV_0
+INV 		][8590_1937_INV_0
+INV 		][8603_1941_INV_0
+INV 		][8604_1943_INV_0
+INV 		][8617_1947_INV_0
+INV 		][8618_1949_INV_0
+INV 		][8646_1955_INV_0
+INV 		][8659_1959_INV_0
+INV 		][8660_1961_INV_0
+INV 		][8673_1965_INV_0
+INV 		][8674_1967_INV_0
+INV 		][17284_3112_INV_0
+INV 		][17297_3115_INV_0
+INV 		][17325_3121_INV_0
+INV 		][17327_3123_INV_0
+INV 		][17341_3127_INV_0
+INV 		][17369_3134_INV_0
+INV 		][17371_3136_INV_0
+INV 		][17413_3145_INV_0
+INV 		][17628_3162_INV_0
+INV 		][17691_3170_INV_0
+INV 		][17714_3176_INV_0
+INV 		][17891_3186_INV_0
+INV 		][17937_3196_INV_0
+INV 		][18005_3208_INV_0
+INV 		][19152_3212_INV_0
+INV 		][19154_3214_INV_0
+INV 		][19166_3218_INV_0
+INV 		][19168_3220_INV_0
+INV 		][19182_3225_INV_0
+INV 		][19196_3228_INV_0
+INV 		][19225_3233_INV_0
+INV 		][19264_3238_INV_0
+INV 		][19266_3240_INV_0
+INV 		][19278_3244_INV_0
+INV 		][19280_3246_INV_0
+INV 		][19308_3251_INV_0
+INV 		][19337_3255_INV_0
+INV 		][19376_3258_INV_0
+INV 		][19378_3260_INV_0
+INV 		][19390_3264_INV_0
+INV 		][19392_3266_INV_0
+INV 		][19406_3271_INV_0
+INV 		][19420_3274_INV_0
+INV 		][19449_3279_INV_0
+INV 		][19488_3284_INV_0
+INV 		][19490_3286_INV_0
+INV 		][19502_3290_INV_0
+INV 		][19504_3292_INV_0
+INV 		][19518_3297_INV_0
+INV 		][19532_3299_INV_0
+INV 		][19561_3303_INV_0
+INV 		][19600_3306_INV_0
+INV 		][19602_3308_INV_0
+INV 		][19614_3312_INV_0
+INV 		][19616_3314_INV_0
+INV 		][19630_3319_INV_0
+INV 		][19644_3322_INV_0
+INV 		][19673_3327_INV_0
+INV 		][19763_3343_INV_0
+INV 		][19887_3355_INV_0
+INV 		][20495_3371_INV_0
+INV 		][20541_3381_INV_0
+INV 		][20665_3393_INV_0
+INV 		][22487_3488_INV_0
+INV 		][22563_3500_INV_0
+INV 		][22639_3513_INV_0
+INV 		][22715_3526_INV_0
+INV 		][22791_3539_INV_0
+INV 		][22915_3551_INV_0
+INV 		][22985_3564_INV_0
+INV 		][23055_3577_INV_0
+INV 		][23125_3590_INV_0
+INV 		][23195_3603_INV_0
+INV 		][26125_3669_INV_0
+INV 		][26194_3673_INV_0
+INV 		][26257_3685_INV_0
+INV 		][26312_3689_INV_0
+INV 		][26326_3691_INV_0
+INV 		][26389_3703_INV_0
+INV 		][26444_3707_INV_0
+INV 		][26458_3709_INV_0
+INV 		][26521_3721_INV_0
+INV 		][26535_3724_INV_0
+INV 		][26576_3727_INV_0
+INV 		][26653_3739_INV_0
+INV 		][26667_3742_INV_0
+INV 		][26708_3746_INV_0
+INV 		][26785_3759_INV_0
+INV 		][26801_3762_INV_0
+INV 		][26861_3773_INV_0
+INV 		][26877_3776_INV_0
+INV 		][26972_3782_INV_0
+INV 		][27049_3797_INV_0
+INV 		][27065_3800_INV_0
+INV 		][27181_3815_INV_0
+INV 		][27197_3819_INV_0
+INV 		][27313_3833_INV_0
+INV 		][27329_3837_INV_0
+INV 		][27445_3850_INV_0
+INV 		][27577_3866_INV_0
+INV 		][27709_3882_INV_0
+INV 		][27897_3902_INV_0
+INV 		][27973_3914_INV_0
+INV 		][28357_3925_INV_0
+INV 		][28495_3938_INV_0
+INV 		][28633_3947_INV_0
+INV 		][28771_3960_INV_0
+INV 		][28909_3969_INV_0
+INV 		][29047_3982_INV_0
+INV 		][29121_3998_INV_0
+INV 		][29323_4016_INV_0
+INV 		][29461_4035_INV_0
+INV 		][29599_4048_INV_0
+INV 		][29759_4073_INV_0
+INV 		][29775_4078_INV_0
+INV 		][29893_4094_INV_0
+INV 		][29909_4099_INV_0
+INV 		][30027_4113_INV_0
+INV 		][30043_4118_INV_0
+INV 		][30225_4134_INV_0
+INV 		][30241_4139_INV_0
+INV 		][30295_4151_INV_0
+INV 		][30311_4156_INV_0
+INV 		][30731_4174_INV_0
+INV 		][30743_4177_INV_0
+INV 		][30757_4179_INV_0
+INV 		][30771_4183_INV_0
+INV 		][36495_4733_INV_0
+INV 		][36519_4785_INV_0
+INV 		][36577_4876_INV_0
+INV 		][36584_4885_INV_0
+INV 		][36617_4902_INV_0
+INV 		][36707_4950_INV_0
+INV 		][36761_4980_INV_0
+INV 		][37199_5082_INV_0
+INV 		][37210_5088_INV_0
+INV 		][37216_5093_INV_0
+INV 		][37222_5098_INV_0
+INV 		][37228_5103_INV_0
+INV 		][37234_5108_INV_0
+INV 		][37246_5117_INV_0
+INV 		][37252_5122_INV_0
+INV 		][37258_5127_INV_0
+INV 		][37264_5132_INV_0
+INV 		][37271_5138_INV_0
+INV 		][37325_5168_INV_0
+INV 		][37474_5318_INV_0
+INV 		][37480_5332_INV_0
+INV 		][37487_5343_INV_0
+INV 		][37547_5386_INV_0
+INV 		][37607_5426_INV_0
+INV 		][37667_5469_INV_0
+INV 		][37727_5512_INV_0
+INV 		][37787_5551_INV_0
+INV 		][37847_5593_INV_0
+INV 		][37907_5627_INV_0
+INV 		][37960_5657_INV_0
+INV 		][37967_5663_INV_0
+INV 		][38002_5681_INV_0
+INV 		][38008_5687_INV_0
+INV 		][38020_5694_INV_0
+INV 		][38026_5712_INV_0
+INV 		][38031_5717_INV_0
+INV 		][38036_5724_INV_0
+INV 		][38041_5729_INV_0
+INV 		][38081_5769_INV_0
+INV 		][38141_5809_INV_0
+INV 		][38201_5850_INV_0
+INV 		][38261_5890_INV_0
+INV 		][38321_5934_INV_0
+INV 		][38381_5974_INV_0
+INV 		][38441_6016_INV_0
+INV 		][38501_6055_INV_0
+INV 		][38656_6141_INV_0
+INV 		][38657_6149_INV_0
+INV 		][38658_6152_INV_0
+INV 		][38661_6162_INV_0
+INV 		][38666_6173_INV_0
+INV 		][38679_6187_INV_0
+INV 		][38694_6214_INV_0
+INV 		][38825_6271_INV_0
+INV 		][38840_6296_INV_0
+INV 		][38846_6302_INV_0
+INV 		][38861_6328_INV_0
+INV 		][39002_6394_INV_0
+INV 		][39017_6420_INV_0
+INV 		][39023_6427_INV_0
+INV 		][39038_6453_INV_0
+INV 		][39053_6471_INV_0
+INV 		][39208_6546_INV_0
+INV 		][39223_6563_INV_0
+INV 		][39373_6633_INV_0
+INV 		][39388_6648_INV_0
+INV 		][39543_6729_INV_0
+INV 		][39558_6748_INV_0
+INV 		][39573_6769_INV_0
+INV 		][39588_6788_INV_0
+INV 		][39738_6867_INV_0
+INV 		][39744_6869_INV_0
+INV 		][39901_6927_INV_0
+INV 		][40278_7027_INV_0
+INV 		][40374_7076_INV_0
+INV 		][40377_7081_INV_0
+INV 		][40378_7083_INV_0
+INV 		][40383_7086_INV_0
+INV 		][40423_7116_INV_0
+INV 		][40427_7121_INV_0
+INV 		][40431_7125_INV_0
+INV 		][40435_7129_INV_0
+INV 		][40439_7133_INV_0
+INV 		][40443_7137_INV_0
+INV 		][40447_7141_INV_0
+INV 		][40451_7145_INV_0
+INV 		][40465_7183_INV_0
+INV 		][40561_7232_INV_0
+INV 		][40564_7237_INV_0
+INV 		][40565_7239_INV_0
+INV 		][40570_7242_INV_0
+INV 		][40614_7277_INV_0
+INV 		][40618_7281_INV_0
+INV 		][40622_7285_INV_0
+INV 		][40626_7289_INV_0
+INV 		][40630_7293_INV_0
+INV 		][40634_7297_INV_0
+INV 		][40638_7301_INV_0
+INV 		][40652_7333_INV_0
+INV 		][40748_7382_INV_0
+INV 		][40751_7387_INV_0
+INV 		][40752_7389_INV_0
+INV 		][40801_7422_INV_0
+INV 		][40805_7426_INV_0
+INV 		][40809_7430_INV_0
+INV 		][40813_7434_INV_0
+INV 		][40817_7438_INV_0
+INV 		][40821_7442_INV_0
+INV 		][40825_7446_INV_0
+INV 		][40839_7477_INV_0
+INV 		][40935_7526_INV_0
+INV 		][40938_7531_INV_0
+INV 		][40939_7533_INV_0
+INV 		][40988_7566_INV_0
+INV 		][40992_7570_INV_0
+INV 		][40996_7574_INV_0
+INV 		][41000_7578_INV_0
+INV 		][41004_7582_INV_0
+INV 		][41008_7586_INV_0
+INV 		][41012_7590_INV_0
+INV 		][41026_7620_INV_0
+INV 		][41122_7669_INV_0
+INV 		][41125_7674_INV_0
+INV 		][41126_7676_INV_0
+INV 		][41131_7679_INV_0
+INV 		][41175_7713_INV_0
+INV 		][41179_7717_INV_0
+INV 		][41183_7721_INV_0
+INV 		][41187_7725_INV_0
+INV 		][41191_7729_INV_0
+INV 		][41195_7733_INV_0
+INV 		][41199_7737_INV_0
+INV 		][41213_7767_INV_0
+INV 		][41309_7816_INV_0
+INV 		][41312_7821_INV_0
+INV 		][41313_7823_INV_0
+INV 		][41318_7826_INV_0
+INV 		][41358_7855_INV_0
+INV 		][41362_7860_INV_0
+INV 		][41366_7864_INV_0
+INV 		][41370_7868_INV_0
+INV 		][41374_7872_INV_0
+INV 		][41378_7876_INV_0
+INV 		][41382_7880_INV_0
+INV 		][41386_7884_INV_0
+INV 		][41400_7912_INV_0
+INV 		][41496_7961_INV_0
+INV 		][41499_7969_INV_0
+INV 		][41500_7971_INV_0
+INV 		][41505_7976_INV_0
+INV 		][41529_7996_INV_0
+INV 		][41533_8000_INV_0
+INV 		][41545_8012_INV_0
+INV 		][41549_8017_INV_0
+INV 		][41553_8021_INV_0
+INV 		][41557_8025_INV_0
+INV 		][41561_8029_INV_0
+INV 		][41569_8036_INV_0
+INV 		][41587_8111_INV_0
+INV 		][41683_8160_INV_0
+INV 		][41686_8167_INV_0
+INV 		][41687_8169_INV_0
+INV 		][41692_8174_INV_0
+INV 		][41716_8194_INV_0
+INV 		][41720_8198_INV_0
+INV 		][41732_8210_INV_0
+INV 		][41736_8215_INV_0
+INV 		][41740_8219_INV_0
+INV 		][41744_8223_INV_0
+INV 		][41748_8227_INV_0
+INV 		][41756_8234_INV_0
+INV 		][42066_8405_INV_0
+INV 		][42108_8429_INV_0
+INV 		][42123_8437_INV_0
+INV 		][42148_8448_INV_0
+INV 		][42153_8451_INV_0
+INV 		][42173_8460_INV_0
+INV 		][42188_8467_INV_0
+INV 		][42203_8474_INV_0
+INV 		][42213_8479_INV_0
+INV 		][42218_8482_INV_0
+INV 		][42223_8485_INV_0
+INV 		][42228_8488_INV_0
+INV 		][42233_8491_INV_0
+INV 		][42238_8494_INV_0
+INV 		][42243_8497_INV_0
+INV 		][42248_8500_INV_0
+INV 		][42253_8503_INV_0
+INV 		][42258_8506_INV_0
+INV 		][42263_8509_INV_0
+INV 		][42268_8512_INV_0
+INV 		][42273_8516_INV_0
+INV 		][42303_8527_INV_0
+INV 		][42313_8533_INV_0
+INV 		][42343_8547_INV_0
+INV 		][42353_8553_INV_0
+INV 		][42383_8566_INV_0
+INV 		][42418_8582_INV_0
+INV 		][42428_8587_INV_0
+INV 		][42448_8592_INV_0
+INV 		][42458_8597_INV_0
+INV 		][42473_8605_INV_0
+INV 		][42483_8610_INV_0
+INV 		][42498_8618_INV_0
+INV 		][42508_8623_INV_0
+INV 		][42523_8630_INV_0
+INV 		][42533_8636_INV_0
+INV 		][42548_8644_INV_0
+INV 		][42558_8649_INV_0
+INV 		][42573_8656_INV_0
+INV 		][42578_8659_INV_0
+INV 		][42588_8665_INV_0
+INV 		][42603_8673_INV_0
+INV 		][42613_8680_INV_0
+INV 		][42618_8683_INV_0
+INV 		][42653_8700_INV_0
+INV 		][42658_8703_INV_0
+INV 		][42668_8709_INV_0
+INV 		][42688_8719_INV_0
+INV 		][42693_8723_INV_0
+INV 		][42698_8726_INV_0
+INV 		][42718_8737_INV_0
+INV 		][42733_8744_INV_0
+INV 		][42738_8747_INV_0
+INV 		][42748_8753_INV_0
+INV 		][42773_8766_INV_0
+INV 		][42778_8769_INV_0
+INV 		][42783_8772_INV_0
+INV 		][42788_8776_INV_0
+INV 		][42813_8789_INV_0
+INV 		][42828_8795_INV_0
+INV 		][42843_8802_INV_0
+INV 		][42853_8808_INV_0
+INV 		][42858_8812_INV_0
+INV 		][42863_8815_INV_0
+INV 		][42868_8818_INV_0
+INV 		][42873_8822_INV_0
+INV 		][42883_8828_INV_0
+INV 		][42893_8833_INV_0
+INV 		][42903_8839_INV_0
+INV 		][42918_8845_INV_0
+INV 		][42933_8852_INV_0
+INV 		][42938_8855_INV_0
+INV 		][42948_8859_INV_0
+INV 		][42953_8862_INV_0
+INV 		][42968_8870_INV_0
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| CLK                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| H_sync                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| VGA_BLUE                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| VGA_GREEN                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| VGA_RED                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| V_sync                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| btnL                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btnL2                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btnR                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| btnR2                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fire                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| fire2                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rst_game                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| speaker                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| startbtn                           | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+
+Section 12 - Control Set Information
+------------------------------------
++-----------------------------------------------------------------------------------------------------------------+
+| Clock Signal                 | Reset Signal  | Set Signal | Enable Signal   | Slice Load Count | Bel Load Count |
++-----------------------------------------------------------------------------------------------------------------+
+| CLK_BUFGP                    |               |            |                 | 14               | 37             |
+| CLK_BUFGP                    |               |            | ][37379_5201    | 7                | 24             |
+| CLK_BUFGP                    |               |            | lut10156_4890   | 1                | 2              |
+| CLK_BUFGP                    |               |            | lut31070_6181   | 13               | 16             |
+| CLK_BUFGP                    |               |            | lut37426_7089   | 2                | 10             |
+| CLK_BUFGP                    |               |            | lut37483_7119   | 4                | 9              |
+| CLK_BUFGP                    |               |            | lut38167_7245   | 2                | 10             |
+| CLK_BUFGP                    |               |            | lut38225_7275   | 4                | 9              |
+| CLK_BUFGP                    |               |            | lut38880_7394   | 2                | 10             |
+| CLK_BUFGP                    |               |            | lut38934_7420   | 3                | 9              |
+| CLK_BUFGP                    |               |            | lut39588_7538   | 2                | 10             |
+| CLK_BUFGP                    |               |            | lut39642_7564   | 4                | 9              |
+| CLK_BUFGP                    |               |            | lut40296_7682   | 3                | 10             |
+| CLK_BUFGP                    |               |            | lut40354_7711   | 3                | 9              |
+| CLK_BUFGP                    |               |            | lut41008_7829   | 3                | 10             |
+| CLK_BUFGP                    |               |            | lut41065_7858   | 3                | 9              |
+| CLK_BUFGP                    |               |            | lut41722_7979   | 2                | 10             |
+| CLK_BUFGP                    |               |            | lut41784_8015   | 3                | 9              |
+| CLK_BUFGP                    |               |            | lut42998_8177   | 3                | 10             |
+| CLK_BUFGP                    |               |            | lut43060_8213   | 3                | 9              |
+| CLK_BUFGP                    |               |            | lut44168_8324   | 3                | 19             |
+| CLK_BUFGP                    | ][36577_4876  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][36584_4885  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38057_5741  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38061_5745  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38065_5749  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38069_5753  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38073_5757  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38077_5761  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][38657_6149  |            | ][38658_6152    | 1                | 1              |
+| CLK_BUFGP                    | ][40278_7027  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][40374_7076  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][40465_7183  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][40561_7232  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][40652_7333  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][40748_7382  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][40839_7477  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][40935_7526  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][41026_7620  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][41122_7669  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][41213_7767  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][41309_7816  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][41400_7912  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][41496_7961  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][41587_8111  |            |                 | 6                | 24             |
+| CLK_BUFGP                    | ][41683_8160  |            |                 | 1                | 1              |
+| CLK_BUFGP                    | ][41958_8361  |            |                 | 1                | 3              |
+| CLK_BUFGP                    | lut30763_6146 |            | ][38658_6152    | 1                | 2              |
+| CLK_BUFGP                    | lut36162_6925 |            | ][39901_6927    | 5                | 18             |
+| CLK_BUFGP                    | lut36736_6995 |            | lut31070_6181   | 6                | 24             |
+| CLK_BUFGP                    | lut43904_8291 |            |                 | 3                | 12             |
+| CLK_BUFGP                    | lut44069_8306 |            | lut43904_8291   | 3                | 12             |
+| CLK_BUFGP                    | lut44589_8406 |            |                 | 1                | 1              |
+| CLK_BUFGP                    | lut44596_8409 |            |                 | 1                | 1              |
+| CLK_BUFGP                    | rst           |            |                 | 93               | 377            |
+| CLK_BUFGP                    | rst           |            | SHIP/liveminus  | 1                | 3              |
+| CLK_BUFGP                    | rst           |            | SHIP/liveminus2 | 1                | 3              |
+| CLK_BUFGP                    | rst           |            | ][36617_4902    | 3                | 15             |
+| CLK_BUFGP                    | rst           |            | ][36707_4950    | 2                | 9              |
+| CLK_BUFGP                    | rst           |            | ][36761_4980    | 2                | 9              |
+| CLK_BUFGP                    | rst           |            | ][37199_5082    | 5                | 12             |
+| CLK_BUFGP                    | rst           |            | ][37271_5138    | 2                | 9              |
+| CLK_BUFGP                    | rst           |            | ][37325_5168    | 2                | 9              |
+| CLK_BUFGP                    | rst           |            | ][37487_5343    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37547_5386    | 2                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37607_5426    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37667_5469    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37727_5512    | 4                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37787_5551    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37847_5593    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37907_5627    | 4                | 10             |
+| CLK_BUFGP                    | rst           |            | ][37967_5663    | 4                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38081_5769    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38141_5809    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38201_5850    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38261_5890    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38321_5934    | 2                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38381_5974    | 3                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38441_6016    | 4                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38501_6055    | 4                | 10             |
+| CLK_BUFGP                    | rst           |            | ][38679_6187    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][38694_6214    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][38825_6271    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][38840_6296    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][38846_6302    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][38861_6328    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39002_6394    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39017_6420    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39023_6427    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39038_6453    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39053_6471    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39208_6546    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39223_6563    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39373_6633    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39388_6648    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39543_6729    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39558_6748    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39573_6769    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39588_6788    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39738_6867    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][39744_6869    | 7                | 26             |
+| CLK_BUFGP                    | rst           |            | ][40378_7083    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][40565_7239    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][40752_7389    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][40939_7533    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][41126_7676    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][41313_7823    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][41500_7971    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | ][41687_8169    | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | _n2730_inv      | 3                | 7              |
+| CLK_BUFGP                    | rst           |            | _n2733_inv      | 3                | 9              |
+| CLK_BUFGP                    | rst           |            | lut10156_4890   | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | lut10289_4892   | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | lut10399_4894   | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | lut10408_4897   | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | lut36399_6960   | 6                | 22             |
+| CLK_BUFGP                    | rst           |            | lut44513_8380   | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | shipAlive       | 1                | 1              |
+| CLK_BUFGP                    | rst           |            | shipAlive2      | 1                | 1              |
++-----------------------------------------------------------------------------------------------------------------+
+| CLK_Div_200Hz/clk_track_BUFG | rst           |            | lut10884_5008   | 8                | 32             |
+| CLK_Div_200Hz/clk_track_BUFG | rst           |            | lut11486_5041   | 8                | 32             |
++-----------------------------------------------------------------------------------------------------------------+
+| ~rst                         |               |            |                 | 1                | 1              |
++-----------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                            | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                                                                                           |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Game/                             |           | 826/1573      | 380/1312      | 2835/4435     | 0/0           | 0/25      | 0/0     | 1/2   | 0/0   | 0/0   | 0/0   | 0/0       | Game                                                                                                             |
+| +ALIENRKT1                        |           | 19/19         | 46/46         | 41/41         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALIENRKT1                                                                                                   |
+| +ALIENRKT2                        |           | 19/19         | 46/46         | 40/40         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALIENRKT2                                                                                                   |
+| +ALIENRKT3                        |           | 19/19         | 46/46         | 44/44         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALIENRKT3                                                                                                   |
+| +ALIENRKT4                        |           | 18/18         | 46/46         | 44/44         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALIENRKT4                                                                                                   |
+| +ALIENRKT5                        |           | 19/19         | 46/46         | 44/44         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALIENRKT5                                                                                                   |
+| +ALIENRKT6                        |           | 19/19         | 46/46         | 44/44         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALIENRKT6                                                                                                   |
+| +ALN1                             |           | 32/32         | 46/46         | 39/39         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN1                                                                                                        |
+| +ALN10                            |           | 8/8           | 9/9           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN10                                                                                                       |
+| +ALN11                            |           | 11/11         | 10/10         | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN11                                                                                                       |
+| +ALN12                            |           | 32/32         | 38/38         | 41/41         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN12                                                                                                       |
+| +ALN13                            |           | 13/13         | 10/10         | 17/17         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN13                                                                                                       |
+| +ALN14                            |           | 31/31         | 35/35         | 45/45         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN14                                                                                                       |
+| +ALN15                            |           | 29/29         | 62/62         | 73/73         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN15                                                                                                       |
+| +ALN2                             |           | 14/14         | 19/19         | 10/10         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN2                                                                                                        |
+| +ALN3                             |           | 13/13         | 19/19         | 10/10         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN3                                                                                                        |
+| +ALN4                             |           | 14/14         | 19/19         | 10/10         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN4                                                                                                        |
+| +ALN5                             |           | 32/32         | 47/47         | 37/37         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN5                                                                                                        |
+| +ALN6                             |           | 7/7           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN6                                                                                                        |
+| +ALN7                             |           | 24/24         | 35/35         | 31/31         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN7                                                                                                        |
+| +ALN8                             |           | 7/7           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN8                                                                                                        |
+| +ALN9                             |           | 27/27         | 36/36         | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ALN9                                                                                                        |
+| +CLK_Div_200Hz                    |           | 8/8           | 18/18         | 16/16         | 0/0           | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | Game/CLK_Div_200Hz                                                                                               |
+| +GAMEOVER                         |           | 0/1           | 0/1           | 0/0           | 0/0           | 0/6       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER                                                                                                    |
+| ++U0                              |           | 0/1           | 0/1           | 0/0           | 0/0           | 0/6       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0                                                                                                 |
+| +++xst_blk_mem_generator          |           | 0/1           | 0/1           | 0/0           | 0/0           | 0/6       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator                                                                           |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/1           | 0/1           | 0/0           | 0/0           | 0/6       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                             |
+| +++++valid.cstr                   |           | 0/1           | 0/1           | 0/0           | 0/0           | 0/6       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                  |
+| ++++++has_mux_a.A                 |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A                      |
+| ++++++ramloop[14].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r                |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/s6_init.ram    |
+| ++++++ramloop[15].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r                |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/s6_init.ram    |
+| ++++++ramloop[2].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram     |
+| ++++++ramloop[3].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram     |
+| ++++++ramloop[8].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/s6_init.ram     |
+| ++++++ramloop[9].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GAMEOVER/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/s6_init.ram     |
+| +GND_1_o_PWR_1_o_div_182          |           | 33/33         | 0/0           | 97/97         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GND_1_o_PWR_1_o_div_182                                                                                     |
+| +GND_1_o_PWR_1_o_div_186          |           | 68/68         | 0/0           | 187/187       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/GND_1_o_PWR_1_o_div_186                                                                                     |
+| +RKTSHIP                          |           | 27/27         | 46/46         | 72/72         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/RKTSHIP                                                                                                     |
+| +RKTSHIP2                         |           | 26/26         | 46/46         | 72/72         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/RKTSHIP2                                                                                                    |
+| +SHIP                             |           | 135/135       | 72/72         | 452/452       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/SHIP                                                                                                        |
+| +SND                              |           | 8/8           | 19/19         | 23/23         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/SND                                                                                                         |
+| +START                            |           | 0/3           | 0/5           | 0/0           | 0/0           | 0/9       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START                                                                                                       |
+| ++U0                              |           | 0/3           | 0/5           | 0/0           | 0/0           | 0/9       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0                                                                                                    |
+| +++xst_blk_mem_generator          |           | 0/3           | 0/5           | 0/0           | 0/0           | 0/9       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator                                                                              |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/3           | 0/5           | 0/0           | 0/0           | 0/9       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                                |
+| +++++valid.cstr                   |           | 0/3           | 0/5           | 0/0           | 0/0           | 0/9       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                     |
+| ++++++has_mux_a.A                 |           | 3/3           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A                         |
+| ++++++ramloop[10].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/s6_init.ram       |
+| ++++++ramloop[11].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/s6_init.ram       |
+| ++++++ramloop[12].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/s6_init.ram       |
+| ++++++ramloop[17].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/s6_init.ram       |
+| ++++++ramloop[18].ram.r           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/s6_init.ram       |
+| ++++++ramloop[2].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r                    |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/s6_init.ram        |
+| ++++++ramloop[3].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r                    |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/s6_init.ram        |
+| ++++++ramloop[4].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r                    |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/s6_init.ram        |
+| ++++++ramloop[5].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r                    |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/START/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/s6_init.ram        |
+| +alien1                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1                                                                                                      |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1/U0                                                                                                   |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1/U0/xst_blk_mem_generator                                                                             |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                               |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                    |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram       |
+| +alien2                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2                                                                                                      |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2/U0                                                                                                   |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2/U0/xst_blk_mem_generator                                                                             |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                               |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                    |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram       |
+| +alien3                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3                                                                                                      |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3/U0                                                                                                   |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3/U0/xst_blk_mem_generator                                                                             |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                               |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                    |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                   |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/alien3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram       |
+| +points[12]_PWR_1_o_div_178       |           | 6/6           | 0/0           | 11/11         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/points[12]_PWR_1_o_div_178                                                                                  |
+| +points[12]_PWR_1_o_mod_176       |           | 5/5           | 0/0           | 9/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/points[12]_PWR_1_o_mod_176                                                                                  |
+| +points[12]_PWR_1_o_mod_177       |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/points[12]_PWR_1_o_mod_177                                                                                  |
+| +points[12]_PWR_1_o_mod_179       |           | 6/6           | 0/0           | 6/6           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/points[12]_PWR_1_o_mod_179                                                                                  |
+| +scores_0                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0                                                                                                    |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0/U0                                                                                                 |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0/U0/xst_blk_mem_generator                                                                           |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                             |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                  |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_0/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram     |
+| +scores_1                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1                                                                                                    |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1/U0                                                                                                 |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1/U0/xst_blk_mem_generator                                                                           |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                             |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                  |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram     |
+| +scores_2                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2                                                                                                    |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2/U0                                                                                                 |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2/U0/xst_blk_mem_generator                                                                           |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                             |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                  |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram     |
+| +scores_3                         |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3                                                                                                    |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3/U0                                                                                                 |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3/U0/xst_blk_mem_generator                                                                           |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                             |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                  |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                 |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/scores_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram     |
+| +select_menu                      |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu                                                                                                 |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu/U0                                                                                              |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu/U0/xst_blk_mem_generator                                                                        |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                          |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                               |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r              |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/select_menu/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram  |
+| +ship                             |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship                                                                                                        |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship/U0                                                                                                     |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship/U0/xst_blk_mem_generator                                                                               |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                                 |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                      |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                     |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram         |
+| +ship2                            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2                                                                                                       |
+| ++U0                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2/U0                                                                                                    |
+| +++xst_blk_mem_generator          |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2/U0/xst_blk_mem_generator                                                                              |
+| ++++gnativebmg.native_blk_mem_gen |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen                                                |
+| +++++valid.cstr                   |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr                                     |
+| ++++++ramloop[0].ram.r            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r                    |
+| +++++++s6_init.ram                |           | 0/0           | 0/0           | 0/0           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/ship2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram        |
+| +vga                              |           | 12/12         | 48/48         | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Game/vga                                                                                                         |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

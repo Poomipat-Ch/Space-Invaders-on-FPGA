@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 17 18:02:43 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "VGA_RED" LOCATE = SITE "P121" LEVEL 1;
+COMP "VGA_BLUE" LOCATE = SITE "P119" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P123" LEVEL 1;
+COMP "VGA_GREEN" LOCATE = SITE "P120" LEVEL 1;
+COMP "btnL" LOCATE = SITE "P126" LEVEL 1;
+COMP "btnR" LOCATE = SITE "P131" LEVEL 1;
+COMP "fire" LOCATE = SITE "P133" LEVEL 1;
+COMP "btnL2" LOCATE = SITE "P6" LEVEL 1;
+COMP "btnR2" LOCATE = SITE "P8" LEVEL 1;
+COMP "fire2" LOCATE = SITE "P10" LEVEL 1;
+COMP "speaker" LOCATE = SITE "P83" LEVEL 1;
+COMP "H_sync" LOCATE = SITE "P115" LEVEL 1;
+COMP "V_sync" LOCATE = SITE "P114" LEVEL 1;
+COMP "rst_game" LOCATE = SITE "P51" LEVEL 1;
+COMP "startbtn" LOCATE = SITE "P55" LEVEL 1;
+SCHEMATIC END;
+

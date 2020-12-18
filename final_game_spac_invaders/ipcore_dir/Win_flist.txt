@@ -1,0 +1,17 @@
+# Output products list for <Win>
+Win.asy
+Win.gise
+Win.mif
+Win.ngc
+Win.sym
+Win.v
+Win.veo
+Win.xco
+Win.xise
+Win\blk_mem_gen_v7_3_readme.txt
+Win\doc\blk_mem_gen_v7_3_vinfo.html
+Win\doc\pg058-blk-mem-gen.pdf
+Win_flist.txt
+Win_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+summary.log

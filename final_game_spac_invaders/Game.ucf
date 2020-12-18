@@ -1,0 +1,15 @@
+net "CLK" loc = p123;
+net "H_sync" loc = P115;
+net "V_sync" loc = p114;
+net "VGA_RED" loc = P121;
+net "VGA_GREEN" loc = p120;
+net "VGA_BLUE" loc = P119;
+net "startbtn" loc = p55;
+net "rst_game" loc = p51;
+net "btnL" loc = p126;
+net "btnR" loc = p131;
+net "fire" loc = p133;
+net "btnL2" loc = p6;
+net "btnR2" loc = p8;
+net "fire2" loc = p10;
+net "speaker" loc = p83;

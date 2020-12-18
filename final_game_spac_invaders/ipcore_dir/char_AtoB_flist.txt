@@ -1,0 +1,17 @@
+# Output products list for <char_AtoB>
+_xmsgs\pn_parser.xmsgs
+char_AtoB.asy
+char_AtoB.gise
+char_AtoB.mif
+char_AtoB.ngc
+char_AtoB.sym
+char_AtoB.v
+char_AtoB.veo
+char_AtoB.xco
+char_AtoB.xise
+char_AtoB\blk_mem_gen_v7_3_readme.txt
+char_AtoB\doc\blk_mem_gen_v7_3_vinfo.html
+char_AtoB\doc\pg058-blk-mem-gen.pdf
+char_AtoB_flist.txt
+char_AtoB_xmdf.tcl
+summary.log

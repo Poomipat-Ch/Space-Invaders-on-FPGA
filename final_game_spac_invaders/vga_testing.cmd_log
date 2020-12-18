@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.xst" -ofn "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Game.ucf -p xc6slx9-tqg144-3 vga_testing.ngc vga_testing.ngd  
+xst -intstyle ise -ifn "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.xst" -ofn "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Game.ucf -p xc6slx9-tqg144-3 vga_testing.ngc vga_testing.ngd  

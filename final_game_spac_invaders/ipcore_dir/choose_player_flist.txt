@@ -1,0 +1,17 @@
+# Output products list for <choose_player>
+_xmsgs\pn_parser.xmsgs
+choose_player.asy
+choose_player.gise
+choose_player.mif
+choose_player.ngc
+choose_player.sym
+choose_player.v
+choose_player.veo
+choose_player.xco
+choose_player.xise
+choose_player\blk_mem_gen_v7_3_readme.txt
+choose_player\doc\blk_mem_gen_v7_3_vinfo.html
+choose_player\doc\pg058-blk-mem-gen.pdf
+choose_player_flist.txt
+choose_player_xmdf.tcl
+summary.log

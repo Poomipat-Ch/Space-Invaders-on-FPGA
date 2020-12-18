@@ -1,0 +1,17 @@
+# Output products list for <alien2>
+_xmsgs\pn_parser.xmsgs
+alien2.asy
+alien2.gise
+alien2.mif
+alien2.ngc
+alien2.sym
+alien2.v
+alien2.veo
+alien2.xco
+alien2.xise
+alien2\blk_mem_gen_v7_3_readme.txt
+alien2\doc\blk_mem_gen_v7_3_vinfo.html
+alien2\doc\pg058-blk-mem-gen.pdf
+alien2_flist.txt
+alien2_xmdf.tcl
+summary.log

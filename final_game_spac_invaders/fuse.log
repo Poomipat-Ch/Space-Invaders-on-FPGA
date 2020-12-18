@@ -1,0 +1,96 @@
+Running: E:\digit_program\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/digit_program/project_final/final_game_spac_invaders/Game_isim_beh.exe -prj E:/digit_program/project_final/final_game_spac_invaders/Game_beh.prj work.Game work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.v" into library work
+WARNING:HDLCompiler:751 - "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.v" Line 35: Redeclaration of ansi port X is not allowed
+WARNING:HDLCompiler:751 - "E:/digit_program/project_final/final_game_spac_invaders/vga_testing.v" Line 36: Redeclaration of ansi port Y is not allowed
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/Win.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/SpaceShip.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/img.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/GameOver.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/alien3.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/alien2.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/ipcore_dir/alien0.v" into library work
+Analyzing Verilog file "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" into library work
+Analyzing Verilog file "E:/digit_program/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 113: Size mismatch in connection of port <rocketX2>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 114: Size mismatch in connection of port <rocketX2>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 115: Size mismatch in connection of port <rocketX2>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 116: Size mismatch in connection of port <rocketX2>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 117: Size mismatch in connection of port <rocketX2>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 118: Size mismatch in connection of port <rocketX2>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 123: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 124: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 125: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 126: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 128: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 129: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 130: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 131: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 132: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 134: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 135: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 136: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 137: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 138: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 111: Size mismatch in connection of port <direction>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 122: Size mismatch in connection of port <startX>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 144: Size mismatch in connection of port <R>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 146: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 147: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 148: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 149: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 150: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 151: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "E:/digit_program/project_final/final_game_spac_invaders/main_game.v" Line 152: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+Completed static elaboration
+Compiling module spaceship
+Compiling module rocket
+Compiling module alien
+Compiling module Pulse
+Compiling module vga_testing
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module img
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module SpaceShip
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module alien0
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module alien2
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module alien3
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module GameOver
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module Win
+Compiling module Game
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 17 sub-compilation(s) to finish...
+WARNING:Simulator - Unable to copy libPortabilityNOSH.dll to the simulation executable directory: boost::filesystem::copy_file: The system cannot find the path specified, "isim\Game_isim_beh.exe.sim\libPortability.dll".
+Compiled 40 Verilog Units
+Built simulation executable E:/digit_program/project_final/final_game_spac_invaders/Game_isim_beh.exe
+Fuse Memory Usage: 43656 KB
+Fuse CPU Usage: 812 ms

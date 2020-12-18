@@ -1,0 +1,442 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: vga_testing.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "vga_testing.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "vga_testing"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : vga_testing
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" into library work
+Parsing module <vga_testing>.
+WARNING:HDLCompiler:751 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 35: Redeclaration of ansi port X is not allowed
+WARNING:HDLCompiler:751 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 36: Redeclaration of ansi port Y is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <vga_testing>.
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 41: Using initial value of FRAME_WIDTH since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 42: Using initial value of FRAME_HEIGHT since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 44: Using initial value of H_FP since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 45: Using initial value of H_PW since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 46: Using initial value of H_MAX since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 48: Using initial value of V_FP since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 49: Using initial value of V_PW since it is never assigned
+WARNING:HDLCompiler:872 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 50: Using initial value of V_MAX since it is never assigned
+WARNING:HDLCompiler:413 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 73: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 81: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 89: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v" Line 97: Result of 2-bit expression is truncated to fit in 1-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vga_testing>.
+    Related source file is "E:\digit_program\project_final\final_game_spac_invaders\vga_testing.v".
+    Found 12-bit register for signal <v_cntr_reg>.
+    Found 1-bit register for signal <VGA_HS_O>.
+    Found 1-bit register for signal <VGA_VS_O>.
+    Found 12-bit register for signal <X>.
+    Found 12-bit register for signal <Y>.
+    Found 4-bit register for signal <VGA_RED_O>.
+    Found 4-bit register for signal <VGA_GREEN_O>.
+    Found 4-bit register for signal <VGA_BLUE_O>.
+    Found 12-bit register for signal <h_cntr_reg>.
+    Found 12-bit adder for signal <h_cntr_reg[11]_GND_1_o_add_2_OUT> created at line 73.
+    Found 12-bit adder for signal <v_cntr_reg[11]_GND_1_o_add_9_OUT> created at line 81.
+    Found 12-bit comparator lessequal for signal <n0010> created at line 86
+    Found 12-bit comparator greater for signal <h_cntr_reg[11]_GND_1_o_LessThan_16_o> created at line 86
+    Found 12-bit comparator greater for signal <n0015> created at line 94
+    Found 12-bit comparator greater for signal <v_cntr_reg[11]_GND_1_o_LessThan_19_o> created at line 94
+    Found 12-bit comparator greater for signal <h_cntr_reg[11]_GND_1_o_LessThan_21_o> created at line 102
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  62 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+Unit <vga_testing> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 12-bit adder                                          : 2
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 12-bit register                                       : 4
+ 4-bit register                                        : 3
+# Comparators                                          : 5
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <vga_red_reg_1> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_red_reg_2> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_red_reg_3> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_green_reg_1> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_green_reg_2> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_green_reg_3> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_blue_reg_1> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_blue_reg_2> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_blue_reg_3> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <vga_testing>.
+The following registers are absorbed into counter <h_cntr_reg>: 1 register on signal <h_cntr_reg>.
+The following registers are absorbed into counter <v_cntr_reg>: 1 register on signal <v_cntr_reg>.
+Unit <vga_testing> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 12-bit up counter                                     : 2
+# Registers                                            : 38
+ Flip-Flops                                            : 38
+# Comparators                                          : 5
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <vga_red_reg_1> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_red_reg_2> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_red_reg_3> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_green_reg_1> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_green_reg_2> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_green_reg_3> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_blue_reg_1> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_blue_reg_2> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <vga_blue_reg_3> has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <vga_testing> ...
+WARNING:Xst:1710 - FF/Latch <Y_10> (without init value) has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Y_11> (without init value) has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_9> (without init value) has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_10> (without init value) has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <X_11> (without init value) has a constant value of 0 in block <vga_testing>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block vga_testing, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : vga_testing.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 102
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 22
+#      LUT2                        : 4
+#      LUT3                        : 4
+#      LUT5                        : 13
+#      LUT6                        : 9
+#      MUXCY                       : 22
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 48
+#      FD                          : 17
+#      FDE                         : 19
+#      FDR                         : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 41
+#      IBUF                        : 3
+#      OBUF                        : 38
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              48  out of  11440     0%  
+ Number of Slice LUTs:                   54  out of   5720     0%  
+    Number used as Logic:                54  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     73
+   Number with an unused Flip Flop:      25  out of     73    34%  
+   Number with an unused LUT:            19  out of     73    26%  
+   Number of fully used LUT-FF pairs:    29  out of     73    39%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          42
+ Number of bonded IOBs:                  42  out of    102    41%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_I                              | BUFGP                  | 48    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.247ns (Maximum Frequency: 190.594MHz)
+   Minimum input arrival time before clock: 2.211ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_I'
+  Clock period: 5.247ns (frequency: 190.594MHz)
+  Total number of paths / destination ports: 1146 / 79
+-------------------------------------------------------------------------
+Delay:               5.247ns (Levels of Logic = 4)
+  Source:            h_cntr_reg_3 (FF)
+  Destination:       v_cntr_reg_1 (FF)
+  Source Clock:      CLK_I rising
+  Destination Clock: CLK_I rising
+
+  Data Path: h_cntr_reg_3 to v_cntr_reg_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   1.028  h_cntr_reg_3 (h_cntr_reg_3)
+     LUT6:I1->O           13   0.203   1.037  GND_1_o_GND_1_o_equal_9_o<11>1 (GND_1_o_GND_1_o_equal_9_o<11>)
+     LUT2:I0->O           13   0.203   0.933  GND_1_o_GND_1_o_equal_9_o<11>3 (GND_1_o_GND_1_o_equal_9_o)
+     LUT6:I5->O           11   0.205   0.883  GND_1_o_GND_1_o_AND_1_o2 (GND_1_o_GND_1_o_AND_1_o)
+     LUT5:I4->O            1   0.205   0.000  v_cntr_reg_1_rstpot (v_cntr_reg_1_rstpot)
+     FD:D                      0.102          v_cntr_reg_1
+    ----------------------------------------
+    Total                      5.247ns (1.365ns logic, 3.882ns route)
+                                       (26.0% logic, 74.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_I'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              2.211ns (Levels of Logic = 2)
+  Source:            R (PAD)
+  Destination:       vga_red_reg_0 (FF)
+  Destination Clock: CLK_I rising
+
+  Data Path: R to vga_red_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.684  R_IBUF (R_IBUF)
+     LUT2:I0->O            1   0.203   0.000  vga_red_reg_0_rstpot (vga_red_reg_0_rstpot)
+     FD:D                      0.102          vga_red_reg_0
+    ----------------------------------------
+    Total                      2.211ns (1.527ns logic, 0.684ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_I'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            vga_red_reg_0 (FF)
+  Destination:       VGA_RED_O<0> (PAD)
+  Source Clock:      CLK_I rising
+
+  Data Path: vga_red_reg_0 to VGA_RED_O<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  vga_red_reg_0 (vga_red_reg_0)
+     OBUF:I->O                 2.571          VGA_RED_O_0_OBUF (VGA_RED_O<0>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_I
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_I          |    5.247|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.48 secs
+ 
+--> 
+
+Total memory usage is 4487016 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
